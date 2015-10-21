@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2013 16:06:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class name="br.com.jguedes.scarf.entidades.agendamento.Agendamento" table="AGENDAMENTO">
+  <id name="id" type="long">
+   <column name="ID"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="datain" type="java.util.Date">
+   <column name="DATAIN"/>
+  </property>
+  <property generated="never" lazy="false" name="datafin" type="java.util.Date">
+   <column name="DATAFIN"/>
+  </property>
+  <property generated="never" lazy="false" name="descricao" type="java.lang.String">
+   <column name="DESCRICAO"/>
+  </property>
+  <property generated="never" lazy="false" name="status" type="char">
+   <column name="STATUS"/>
+  </property>
+  <set lazy="false" name="recursos" sort="unsorted" table="AGENDAMENTO_RECURSO">
+   <key column="ID_AGENDAMENTO"/>
+   <many-to-many class="br.com.jguedes.scarf.entidades.recurso.Recurso"
+    column="ID_RECURSO" unique="false"/>
+  </set>
+  <many-to-one access="field"
+   class="br.com.jguedes.scarf.entidades.usuario.Usuario" fetch="join" name="agendador">
+   <column name="AGENDADOR"/>
+  </many-to-one>
+ </class>
+</hibernate-mapping>

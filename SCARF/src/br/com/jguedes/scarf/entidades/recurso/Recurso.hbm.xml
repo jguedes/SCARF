@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2013 16:06:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="br.com.jguedes.scarf.entidades.recurso.Recurso"
+		table="RECURSO">
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="nome"
+			type="java.lang.String">
+			<column name="NOME" />
+		</property>
+		<property generated="never" lazy="false" name="descricao"
+			type="java.lang.String">
+			<column name="DESCRICAO" />
+		</property>
+		<property generated="never" lazy="false" name="datadecadastro"
+			type="java.util.Date">
+			<column name="DATADECADASTRO" />
+		</property>
+		<property generated="never" lazy="false" name="capacidade"
+			type="long">
+			<column name="CAPACIDADE" />
+		</property>
+		<many-to-one cascade="none" insert="true" access="field"
+			update="true" class="br.com.jguedes.scarf.entidades.usuario.Usuario"
+			fetch="join" name="cadastrador" lazy="false">
+			<column name="CADASTRADOR" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

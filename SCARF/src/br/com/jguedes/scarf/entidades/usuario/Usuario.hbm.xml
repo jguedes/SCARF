@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/06/2013 16:06:14 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class abstract="true" name="br.com.jguedes.scarf.entidades.usuario.Usuario"
+		table="USUARIO">
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property generated="never" lazy="false" name="login"
+			type="java.lang.String">
+			<column name="LOGIN" />
+		</property>
+		<property generated="never" lazy="false" name="senha"
+			type="java.lang.String">
+			<column name="SENHA" />
+		</property>
+		<property generated="never" lazy="false" name="nome"
+			type="java.lang.String">
+			<column name="NOME" />
+		</property>
+		<property generated="never" lazy="false" name="cpf"
+			type="java.lang.String">
+			<column name="CPF" />
+		</property>
+		<property generated="never" lazy="false" name="rg"
+			type="java.lang.String">
+			<column name="RG" />
+		</property>
+		<property generated="never" lazy="false" name="email"
+			type="java.lang.String">
+			<column name="EMAIL" />
+		</property>
+		<property generated="never" lazy="false" name="rua"
+			type="java.lang.String">
+			<column name="RUA" />
+		</property>
+		<property generated="never" lazy="false" name="numero"
+			type="java.lang.String">
+			<column name="NUMERO" />
+		</property>
+		<property generated="never" lazy="false" name="bairro"
+			type="java.lang.String">
+			<column name="BAIRRO" />
+		</property>
+		<property generated="never" lazy="false" name="municipio"
+			type="java.lang.String">
+			<column name="MUNICIPIO" />
+		</property>
+		<property generated="never" lazy="false" name="uf"
+			type="java.lang.String">
+			<column name="UF" />
+		</property>
+		<property generated="never" lazy="false" name="pais"
+			type="java.lang.String">
+			<column name="PAIS" />
+		</property>
+		<property generated="never" lazy="false" name="cep"
+			type="java.lang.String">
+			<column name="CEP" />
+		</property>
+		<many-to-one class="br.com.jguedes.scarf.entidades.usuario.Usuario"
+			access="field" fetch="join" name="cadastrador" />
+		<joined-subclass
+			name="br.com.jguedes.scarf.entidades.usuario.administrador.Administrador"
+			table="ADMINISTRADOR">
+			<key column="ID" />
+			<property generated="never" lazy="false" name="cargo"
+				type="java.lang.String">
+				<column name="CARGO" />
+			</property>
+		</joined-subclass>
+		<joined-subclass
+			name="br.com.jguedes.scarf.entidades.usuario.professor.Professor"
+			table="PROFESSOR">
+			<key column="ID" />
+			<property generated="never" lazy="false" name="disciplina"
+				type="java.lang.String">
+				<column name="DISCIPLINA" />
+			</property>
+		</joined-subclass>
+		<joined-subclass
+			name="br.com.jguedes.scarf.entidades.usuario.master.Master" table="MASTER">
+			<key column="ID" />
+			<property generated="never" lazy="false" name="sobreOMaster"
+				type="java.lang.String">
+				<column name="SOBREOMASTER" />
+			</property>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

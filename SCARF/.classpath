@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="br/com/jguedes/scarf/testes/testacriarbanco/|br/com/jguedes/scarf/testes/testacrudadministrador/|br/com/jguedes/scarf/testes/testacrudagendamento/|br/com/jguedes/scarf/testes/testacrudprofessor/|br/com/jguedes/scarf/testes/testacrudrecurso/|br/com/jguedes/scarf/testes/testeComDatas/|br/com/jguedes/scarf/testes/" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.ajdt.core.ASPECTJRT_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="libs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-core-4.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="libs/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="libs/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="libs/javassist.jar"/>
+	<classpathentry kind="lib" path="libs/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="libs/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="libs/mysql-connector-java-5.1.24-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

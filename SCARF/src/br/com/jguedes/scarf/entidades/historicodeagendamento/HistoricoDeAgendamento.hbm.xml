@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2013 18:38:57 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class
+		name="br.com.jguedes.scarf.entidades.historicodeagendamento.HistoricoDeAgendamento"
+		table="HISTORICODEAGENDAMENTO">
+		<id name="Id" type="long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="acao" type="java.lang.String">
+			<column name="ACAO" />
+		</property>
+		<property name="dataEHora" type="java.util.Date">
+			<column name="DATAEHORA" />
+		</property>
+	</class>
+</hibernate-mapping>
